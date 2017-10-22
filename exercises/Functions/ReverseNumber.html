@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	var number = 2441;
+
+	function reverse(number) {
+		var arrayNums = [];
+
+		while (number > 0) {
+			arrayNums.push(parseInt(number) % 10);
+	        number = parseInt(number/10);
+		}
+		return arrayNums;
+	}
+	console.log(reverse(number));
+</script>
+</body>
+</html>
