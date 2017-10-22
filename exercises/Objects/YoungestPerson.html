@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	var persons = [
+		{ firstname: "Gosho", lastname: "Petrov", age: 32 },
+        { firstname: "Bay", lastname: "Ivan", age: 81 },
+        { firstname: "Chocho", lastname: "Chuchkata", age: 25 },
+	];
+
+	function youngestPerson(persons) {
+		var min = 50000;
+		var fullName;
+
+		var result = persons.map(function(x) {
+			if (min > x.age) {
+				min = x.age;
+				fullName = x.firstname + " " + x.lastname;
+			}
+		});
+		return fullName;
+	}
+	console.log(youngestPerson(persons));
+</script>
+</body>
+</html>
