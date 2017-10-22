@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	var obj = {
+		name: "Kris",
+		age: 21,
+	}
+
+	function hasProperty(obj, property) {
+		return obj.hasOwnProperty(property);
+	}
+
+	console.log(hasProperty(obj, "name"));
+	console.log(hasProperty(obj, "tralala"));
+</script>
+</body>
+</html>
