@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+    var text = "mnogo text, mnogo ne6to, Mnogo typ javascript, mnogo ne me kefi!";
+    var counter = 0;
+
+    function findText(counter, text, caseCheck)
+    {
+        if (caseCheck) {
+            text = text.toLowerCase();
+        }
+        var wordsInText = text.split(" ");
+
+        for (var i = 0; i < wordsInText.length; i++) {
+            if (wordsInText[i] == "mnogo") {
+                counter++;
+            }
+        }
+        console.log(counter);
+    }
+
+    findText(counter, text, true);
+    findText(counter, text);
+</script>
+</body>
+</html>
