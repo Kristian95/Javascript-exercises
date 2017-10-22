@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	var array = [4, 1, 1, 4, 2, 3, 4, 4, 1, 1, 1, 1, 1, 2, 4, 9, 3];
+    var frequentNumber = 0;
+    var numberOfRepetitions = 1;
+    var maximumRepetitions = 0;
+    var mostFrequentNumber = 0;
+
+    for (var i = 0; i < array.length - 1; i++) {
+        for (var j = i + 1; j < array.length; j++) {
+            if (array[i] == array[j]) {
+                frequentNumber = array[i];
+                numberOfRepetitions++;
+            }
+        }
+        if (maximumRepetitions < numberOfRepetitions) {
+            maximumRepetitions = numberOfRepetitions;
+            mostFrequentNumber = frequentNumber;
+        }
+        numberOfRepetitions = 1;
+    }
+    console.log(mostFrequentNumber + " repeated " + maximumRepetitions);
+</script>
+</body>
+</html>
