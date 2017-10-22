@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	function person(name, age, sex) {
+		this.name = name,
+		this.age = age,
+		this.sex = sex,
+		this.introduce = function() { 
+			return "My name is: " + this.name + " and i am " + this.age + " years old. My gender is " + this.sex 
+		}
+	}
+
+	function copy(object) {        
+        var copy = Object.assign({}, object);
+
+        return copy;
+	}
+
+	var personOne = new person("Gosho", 25, "men");
+	var personTwo = copy(personOne);
+</script>
+</body>
+</html>
