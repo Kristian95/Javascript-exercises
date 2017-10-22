@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	'use strict'
+	function expressionCheck(expression) {
+		var expressionLegth = expression.length;
+		var bracketsCount = 0;
+		
+		for (var i = 0; i < expressionLegth; i++) {
+			if (expression[i] == "(") {
+				bracketsCount++;
+			}
+			if (expression[i] == ")") {
+				bracketsCount--;
+			}
+			if (bracketsCount < 0) {
+				return "Invalid Expression!"
+			}
+			return "Valid"
+		}
+	}
+	expressionCheck("(29 + 5) * 2")
+</script>
+</body>
+</html>
